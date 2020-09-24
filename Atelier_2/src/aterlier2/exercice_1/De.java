@@ -64,6 +64,13 @@ public class De {
     }
 
     /**
+     * Getter for the number of dice created
+     * @return
+     */
+    public static int getCpt(){
+        return cpt;
+    }
+    /**
      *
      * @return int
      */
