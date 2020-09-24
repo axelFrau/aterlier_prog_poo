@@ -4,23 +4,23 @@ public class De {
 
     /**
      * @param r Random
-     * @param nbr_face int
+     * @param nbrFace int
      * @param nom0 String
      * @param cpt int
      */
     public static Random r = new Random();
-    protected int nbr_face;
+    protected int nbrFace;
     protected String nom;
-    private static int cpt = 0;
+    protected static int cpt = 0;
 
     /**
      * Constructor for the dice with attributes
-     * @param nbr_face int
+     * @param nbrFace int
      * @param nom String
      */
-    public De(int nbr_face, String nom) {
+    public De(int nbrFace, String nom) {
         this.cpt ++;
-        setNbr_face(nbr_face);
+        setNbrFace(nbrFace);
         setNom(nom);
     }
 
@@ -29,23 +29,23 @@ public class De {
      */
     public De() {
         this.cpt ++;
-        setNbr_face(6);
+        setNbrFace(6);
         setNom(null);
     }
 
     /**
      * Setter and Getter for the number of side of the dice
-     * @param nbr_face int
+     * @param nbrFace int
      */
-    public void setNbr_face(int nbr_face){
-        if (3 <= nbr_face && nbr_face <= 120) {
-            this.nbr_face = nbr_face;
+    public void setNbrFace(int nbrFace){
+        if (3 <= nbrFace && nbrFace <= 120) {
+            this.nbrFace = nbrFace;
         } else {
             System.out.println("Nombre de faces invalide");
         }
     }
-    public int getNbr_face(){
-        return this.nbr_face;
+    public int getNbrFace(){
+        return this.nbrFace;
     }
 
     /**
@@ -75,27 +75,27 @@ public class De {
      * @return int
      */
     public int lancer(){
-        return r.nextInt(this.nbr_face) + 1;
+        return r.nextInt(this.nbrFace) + 1;
     }
 
-    public int lancer(int nbr_lancer){
-        int res_lancer = -1;
+    public int lancer(int nbrLancer){
+        int resLancer = -1;
         int res = 0;
         do {
-            int tempo = res_lancer;
-            res_lancer = lancer();
-            System.out.println(res_lancer);
-            if (res_lancer >= res) {
-                res = res_lancer;
+            int tempo = resLancer;
+            resLancer = lancer();
+            System.out.println(resLancer);
+            if (resLancer >= res) {
+                res = resLancer;
             }
-            nbr_lancer -= 1;
-        } while (nbr_lancer != 0);
+            nbrLancer -= 1;
+        } while (nbrLancer != 0);
         return res;
     }
 
     @Override
     public String toString() {
-        return String.format("Nom du dé : " + this.nom +"\nNbr de faces : "+ this.nbr_face + "\n#########################");
+        return String.format("Nom du dé : " + this.nom +"\nNbr de faces : "+ this.nbrFace + "\n#########################");
     }
 
     public boolean equals(Object obj) {
@@ -105,7 +105,7 @@ public class De {
         } else {
             if (this == obj) res = true;
             De de = (De) obj;
-            if (this.getNom() == de.nom && this.getNbr_face() == de.nbr_face){
+            if (this.getNom() == de.nom && this.getNbrFace() == de.nbrFace){
                 res = true;
             }
         }
