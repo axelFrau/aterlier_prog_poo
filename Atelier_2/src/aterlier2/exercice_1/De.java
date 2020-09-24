@@ -52,7 +52,7 @@ public class De {
      * Setter and Getter for the dice name
      * @param nom String
      */
-    public void setNom(String nom){
+    private void setNom(String nom){
         if (nom != "" && nom != null){
             this.nom = nom;
         } else {
@@ -91,11 +91,16 @@ public class De {
         return String.format("Nom du dé : " + this.nom +"\nNbr de faces : "+ this.nbr_face + "\n#########################");
     }
 
-    public boolean equals(De obj) {
+    public boolean equals(Object obj) {
         boolean res = false;
-
-        if (this.getNom() == obj.nom && this.getNbr_face() == obj.nbr_face){
-            res = true;
+        if (obj == null || getClass() != obj.getClass()) {
+            res = false;
+        } else {
+            if (this == obj) res = true;
+            De de = (De) obj;
+            if (this.getNom() == de.nom && this.getNbr_face() == de.nbr_face){
+                res = true;
+            }
         }
         return res;
     }
