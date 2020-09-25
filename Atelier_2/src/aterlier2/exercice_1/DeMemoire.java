@@ -19,7 +19,7 @@ public class DeMemoire extends De {
     public int lancer(){
         int randInt;
         do {
-            randInt = r.nextInt(this.nbrFace) + 1;
+            randInt = super.lancer();
         } while (randInt == getDernierChiffre());
         setDernierChiffre(randInt);
         return randInt;
