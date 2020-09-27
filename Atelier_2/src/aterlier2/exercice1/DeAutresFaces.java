@@ -1,6 +1,5 @@
-package aterlier2.exercice_1;
+package aterlier2.exercice1;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 

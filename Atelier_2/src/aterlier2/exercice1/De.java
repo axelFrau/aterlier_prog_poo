@@ -1,4 +1,4 @@
-package aterlier2.exercice_1;
+package aterlier2.exercice1;
 import java.util.*;
 public class De {
 
@@ -98,6 +98,7 @@ public class De {
         return String.format("Nom du dé : " + this.nom +"\nNbr de faces : "+ this.nbrFace + "\n#########################");
     }
 
+    @Override
     public boolean equals(Object obj) {
         boolean res = false;
         if (obj == null || getClass() != obj.getClass()) {

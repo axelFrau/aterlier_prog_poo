@@ -1,4 +1,4 @@
-package aterlier2.exercice_1;
+package aterlier2.exercice1;
 
 public class DeMemoire extends De {
     private int dernierChiffre = -1;

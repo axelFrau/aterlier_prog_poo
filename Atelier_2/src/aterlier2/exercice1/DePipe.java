@@ -1,4 +1,4 @@
-package aterlier2.exercice_1;
+package aterlier2.exercice1;
 
 public class DePipe extends De{
     private int borneMinimal;
