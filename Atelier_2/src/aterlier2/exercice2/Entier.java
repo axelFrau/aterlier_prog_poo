@@ -12,17 +12,33 @@ public class Entier {
     protected int borneInf;
     protected int borneSup;
 
+    /**
+     * Constructor with value
+     * @param valeur - int
+     * @param borneInf - int
+     * @param borneSup - int
+     */
     public Entier(int valeur, int borneInf,int borneSup){
         this.borneInf = borneInf;
         this.borneSup = borneSup;
         setValeur(valeur);
     }
+
+    /**
+     * Constructor without Value
+     * @param borneInf - int
+     * @param borneSup - int
+     */
     public Entier(int borneInf,int borneSup){
         this.borneInf = borneInf;
         this.borneSup = borneSup;
         setValeur(0);
     }
 
+    /**
+     * Setter for the value
+     * @param valeur - int
+     */
     public void setValeur(int valeur){
         if (valeur >= borneInf && valeur <= borneSup){
             this.valeur = valeur;
@@ -31,18 +47,34 @@ public class Entier {
         }
     }
 
+    /**
+     * Getter for value
+     * @return value - int
+     */
     public int getValeur() {
         return this.valeur;
     }
 
+    /**
+     * Getter BorneInf
+     * @return borneInf  - int
+     */
     public int getBorneInf() {
         return this.borneInf;
     }
 
+    /**
+     * getter for BorneSup
+     * @return borneSup - int
+     */
     public int getBorneSup() {
         return this.borneSup;
     }
 
+    /**
+     * function that returns a list of the two bornes
+     * @return bornes - ArrayList<Interger>
+     */
     public ArrayList<Integer> getBornes() {
         ArrayList<Integer> list = new ArrayList<Integer>();
         list.add(this.borneInf);
@@ -50,23 +82,39 @@ public class Entier {
         return list;
     }
 
+    /**
+     * Increments the value by one
+     */
     public void incremente(){
         int value = getValeur();
         int incremented = value + 1;
         setValeur(incremented);
     }
 
+    /**
+     * Increments the value by a specific amount
+     * @param pas - int
+     */
     public void incremente(int pas){
         int value = getValeur();
         int incremented = value + pas;
         setValeur(incremented);
     }
 
+    /**
+     * Return the info of the object
+     * @return String
+     */
     @Override
     public String toString() {
         return "Valeur : "+ this.valeur + "\nBornes : " + this.borneInf +" et " + this.borneSup;
     }
 
+    /**
+     * Override of equals for Entier Object
+     * @param obj - Object
+     * @return Boolean
+     */
     @Override
     public boolean equals(Object obj) {
         boolean res = false;

@@ -15,6 +15,5 @@ public class Test {
 //            entierFou.incremente();
 //            System.out.println(entierFou.getValeur());
 //        }
-
     }
 }
