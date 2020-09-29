@@ -72,7 +72,7 @@ public class Personne{
 	}
 	/**
 	 * Modificateur
-	 * @param retourne l'adresse
+	 * @param return l'adresse
 	 */
 	public void setAdresse(Adresse a) {
 		adresse=a;

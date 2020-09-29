@@ -9,20 +9,45 @@ public class Employe extends Personne{
     protected GregorianCalendar dateEmbauche;
     protected double salaire;
 
+    /**
+     * Constructeur pour la classe Employe
+     * @param leNom
+     * @param lePrenom
+     * @param laDate
+     * @param lAdresse
+     * @param salaire
+     * @param dateEmbauche
+     */
     protected Employe(String leNom, String lePrenom, GregorianCalendar laDate, Adresse lAdresse,double salaire, GregorianCalendar dateEmbauche){
             super(leNom,lePrenom,laDate,lAdresse);
             this.dateEmbauche = dateEmbauche;
             this.salaire = salaire;
     }
 
+    /**
+     * Getter
+     * @return double salaire
+     */
     public double getSalaire() { return salaire; }
 
+    /**
+     * Setter
+     * @param salaire - double
+     */
     public void setSalaire(double salaire) { this.salaire = salaire; }
 
+    /**
+     * Getter
+     * @return Date dateEmbauche
+     */
     public GregorianCalendar getDateEmbauche() {
         return dateEmbauche;
     }
 
+    /**
+     * Setter
+     * @param dateEmbauche
+     */
     public void setDateEmbauche(GregorianCalendar dateEmbauche) {
         this.dateEmbauche = dateEmbauche;
     }
@@ -50,6 +75,10 @@ public class Employe extends Personne{
         }
     }
 
+    /**
+     * Fucntion that raise the salary of an employe
+     * @param montantPourcentage - double
+     */
     public void augmenterLeSalaire(double montantPourcentage){
         if (montantPourcentage > 0){
             setSalaire(getSalaire() + getSalaire() * (montantPourcentage/100));
@@ -58,11 +87,19 @@ public class Employe extends Personne{
         }
     }
 
+    /**
+     * Fucntion to calculate the number of year passed in the company
+     * @return int
+     */
     public int calculAnnuite(){
         GregorianCalendar today = new GregorianCalendar();
         return today.get(Calendar.YEAR) - this.getDateEmbauche().get(Calendar.YEAR) + 1;
     }
 
+    /**
+     * Override of toString for Employe.
+     * @return
+     */
     @Override
     public String toString() {
         return super.toString() + "\nSalaire : " + this.getSalaire() + " €"
