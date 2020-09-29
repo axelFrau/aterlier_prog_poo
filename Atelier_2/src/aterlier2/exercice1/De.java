@@ -83,7 +83,7 @@ public class De {
         int res = 0;
         do {
             int tempo = resLancer;
-            resLancer = lancer();
+            resLancer = this.lancer();
             System.out.println(resLancer);
             if (resLancer >= res) {
                 res = resLancer;
