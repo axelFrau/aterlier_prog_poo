@@ -104,14 +104,11 @@ public class Personne{
 	@Override
 	public boolean equals(Object obj) {
 		boolean res = false;
-		if (obj == null || getClass() != obj.getClass()) {
-			res = false;
-		} else {
-			if (this == obj) res = true;
+		if (obj == null || getClass() != obj.getClass()) res = false;
+		else {
+			if (this == obj) return true;
 			Personne p = (Personne) obj;
-			if (this.getNom() == p.getNom() && this.getPrenom() == p.getPrenom() && this.getDateNaissance() == p.getDateNaissance()) {
-				res = true;
-			}
+			if (this.getNom() == p.getNom() && this.getPrenom() == p.getPrenom() && this.getDateNaissance().equals(p.getDateNaissance())) res = true;
 		}
 		return res;
 	}
