@@ -20,10 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="403d7cb2-6acb-4d2e-8538-baba24a40854" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Atelier_3/atelier3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/atelier3/atelier3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Atelier_3/src/atelier3/Adresse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Atelier_3/src/atelier3/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Atelier_3/src/atelier3/Personne.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +71,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="23" width="1038" height="858" key="dock-window-1" timestamp="1600931914528">
