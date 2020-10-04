@@ -62,17 +62,14 @@ public class Secretaire extends Employe{
      * @return
      */
     @Override
-    public boolean equals(Object obj) {
-        boolean res = false;
-        if (obj == null || getClass() != obj.getClass()) {
-            res = false;
-        } else {
-            if (this == obj) res = true;
-            Secretaire s = (Secretaire) obj;
-            if (this.getNom() == s.getNom() && this.getPrenom() == s.getPrenom() && this.getDateNaissance() == s.getDateNaissance()) {
-                res = true;
-            }
-        }
-        return res;
-    }
+	public boolean equals(Object obj) {
+		boolean res = false;
+		if (obj == null || getClass() != obj.getClass()) res = false;
+		else {
+			if (this == obj) return true;
+			Secretaire s = (Secretaire) obj;
+			if (this.getNom() == s.getNom() && this.getPrenom() == s.getPrenom() && this.getDateNaissance().equals(s.getDateNaissance())) res = true;
+		}
+		return res;
+	}
 }
