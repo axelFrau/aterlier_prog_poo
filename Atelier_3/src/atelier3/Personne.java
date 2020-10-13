@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Personne{
     private static final Adresse ADRESSE_INCONNUE = null;
-    public static int compteur = 0;
+    private static int compteur = 0;
     private String nom;
     private String prenom;
     private final GregorianCalendar dateNaissance;
