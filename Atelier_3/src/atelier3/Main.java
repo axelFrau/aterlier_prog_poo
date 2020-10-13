@@ -13,7 +13,7 @@ public class Main {
         Personne p3 = new Personne("Comiti","Ghuinevra",date3,new Adresse(2,"Rue St Antoine","20000","Ajaccio"));
         System.out.println(Personne.getCompteur()); // 3
         System.out.println(Personne.older(p1,p2)); //true
-        System.out.println(p1.older(p2));//true
+        System.out.println(p1.plusAgeeQue(p2));//true
         System.out.println(p1.equals(p2)); //false
         GregorianCalendar dateEmbauche = new GregorianCalendar(2018,1,20);
         Employe e1 = Employe.createEmploye("Frau","Axel",date1,

@@ -122,7 +122,8 @@ public class Personne{
 			return false;
 		}
 	}
-	public boolean older(Personne p){
+
+	public boolean plusAgeeQue(Personne p){
 		return older(this, p);
 	}
 
